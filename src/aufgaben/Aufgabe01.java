@@ -13,10 +13,32 @@ public class Aufgabe01
 		ar.add(42);
 		ar.add(12);
 		ar.add(23);
-//		ar.add(-12);
-//		ar.add(0);
-//		ar.add(Integer.MIN_VALUE);
+		try 
+		{
+			ar.add(-12);
+		} 
+		catch (NullArgumentException | NotPositiveArgumentException e) 
+		{
+			e.printStackTrace();
+		}
+		try 
+		{
+			ar.add(0);
+		} 
+		catch (NullArgumentException | NotPositiveArgumentException e) 
+		{
+			e.printStackTrace();
+		}
+		try 
+		{
+			ar.add(Integer.MIN_VALUE);
+		} 
+		catch (NullArgumentException | NotPositiveArgumentException e) 
+		{
+			e.printStackTrace();
+		}
 //		ar.add(Long.MAX_VALUE);
+		
 		System.out.println(Arrays.toString(ar.toArray()));
 	}
 }
